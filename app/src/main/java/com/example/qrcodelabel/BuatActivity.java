@@ -27,10 +27,12 @@ public class BuatActivity extends AppCompatActivity {
     Button create;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buat);
+
         img = (ImageView) findViewById(R.id.qrcode);
         edttxt = (EditText) findViewById(R.id.edittext);
         create = (Button) findViewById(R.id.createbtn);
