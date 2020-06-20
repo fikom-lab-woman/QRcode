@@ -18,13 +18,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edittext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="23dp"
         android:layout_below="@id/qrcode"
         android:layout_marginTop="20dp">
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Code"/>
+            android:hint="Enter Code" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/createbtn"
