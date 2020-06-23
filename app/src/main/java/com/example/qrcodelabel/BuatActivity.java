@@ -22,7 +22,7 @@ public class BuatActivity extends AppCompatActivity {
 
     String TAG="GenerateQRCode";
     String input;
-    EditText edttxt;
+    EditText edit;
     ImageView img;
     Button create;
     Bitmap bitmap;
@@ -34,12 +34,12 @@ public class BuatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_buat);
 
         img = (ImageView) findViewById(R.id.qrcode);
-        edttxt = (EditText) findViewById(R.id.edittext);
+        edit = (EditText) findViewById(R.id.edittext);
         create = (Button) findViewById(R.id.createbtn);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input = edttxt.getText().toString().trim();
+                input = edit.getText().toString().trim();
                 if (input.length()>0){
                     WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
                     Display display = manager.getDefaultDisplay();
@@ -57,7 +57,7 @@ public class BuatActivity extends AppCompatActivity {
                         Log.v(TAG, e.toString());
                     }
                 } else {
-                    edttxt.setError("Required");
+                    edit.setError("Required");
                 }
             }
         });
