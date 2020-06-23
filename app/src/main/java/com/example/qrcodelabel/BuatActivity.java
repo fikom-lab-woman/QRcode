@@ -47,11 +47,11 @@ public class BuatActivity extends AppCompatActivity {
                     display.getSize(point);
                     int width = point.x;
                     int height = point.y;
-                    int dimensiKecil = width<height ? width:height;
-                    dimensiKecil= dimensiKecil*3/4;
-                    qrgEncoder= new QRGEncoder(input, null, QRGContents.Type.TEXT, dimensiKecil);
+                    int smallerdimention = width<height ? width:height;
+                    smallerdimention = smallerdimention*3/4;
+                    qrgEncoder = new QRGEncoder(input, null, QRGContents.Type.TEXT, smallerdimention);
                     try {
-                        bitmap=qrgEncoder.encodeAsBitmap();
+                        bitmap = qrgEncoder.encodeAsBitmap();
                         img.setImageBitmap(bitmap);
                     } catch (WriterException e){
                         Log.v(TAG, e.toString());
